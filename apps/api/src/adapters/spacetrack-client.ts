@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { logger } from '../utils/logger';
-import { SpacetrackCdmData, SpacetrackCdmDataSchema } from '@space-sa/core';
+import { SpacetrackCdmData, SpacetrackCdmDataSchema } from '@eyewitness/core';
 
 export class SpacetrackClient {
   private client: AxiosInstance;

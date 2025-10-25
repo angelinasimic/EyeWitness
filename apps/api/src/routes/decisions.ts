@@ -1,6 +1,6 @@
 import { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import { DecisionEngine } from '../services/decision-engine';
-import { ConjunctionAlertSchema, SpaceWeatherAlertSchema } from '@space-sa/core';
+import { ConjunctionAlertSchema, SpaceWeatherAlertSchema } from '@eyewitness/core';
 import { logger } from '../utils/logger';
 
 // In-memory storage for demo purposes

@@ -5,7 +5,7 @@ import {
   SuggestedAction, 
   Thresholds,
   DEFAULT_THRESHOLDS 
-} from '@space-sa/core';
+} from '@eyewitness/core';
 
 export class DecisionEngine {
   private thresholds: Thresholds;

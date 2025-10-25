@@ -1,7 +1,7 @@
 import { FastifyInstance, FastifyPluginOptions } from 'fastify';
-import { SatelliteInputSchema, SatelliteSchema } from '@space-sa/core';
+import { SatelliteInputSchema, SatelliteSchema } from '@eyewitness/core';
 import { CelestrakClient } from '../adapters/celestrak-client';
-import { SGP4Propagator, createPropagator } from '@space-sa/sgp4';
+import { SGP4Propagator, createPropagator } from '@eyewitness/sgp4';
 import { logger } from '../utils/logger';
 
 // In-memory storage for demo purposes

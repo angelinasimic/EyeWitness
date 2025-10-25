@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { logger } from '../utils/logger';
-import { SocratesData, SocratesDataSchema } from '@space-sa/core';
+import { SocratesData, SocratesDataSchema } from '@eyewitness/core';
 
 export class SocratesClient {
   private client: AxiosInstance;

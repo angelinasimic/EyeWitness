@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { logger } from '../utils/logger';
-import { DonkiCmeData, DonkiNotificationData, DonkiCmeDataSchema, DonkiNotificationDataSchema } from '@space-sa/core';
+import { DonkiCmeData, DonkiNotificationData, DonkiCmeDataSchema, DonkiNotificationDataSchema } from '@eyewitness/core';
 
 export class DonkiClient {
   private client: AxiosInstance;

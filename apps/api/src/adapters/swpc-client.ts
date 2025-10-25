@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { logger } from '../utils/logger';
-import { SwpcKpData, SwpcAlertData, SwpcKpDataSchema, SwpcAlertDataSchema } from '@space-sa/core';
+import { SwpcKpData, SwpcAlertData, SwpcKpDataSchema, SwpcAlertDataSchema } from '@eyewitness/core';
 
 export class SwpcClient {
   private client: AxiosInstance;

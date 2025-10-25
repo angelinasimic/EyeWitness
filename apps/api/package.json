@@ -1,5 +1,5 @@
 {
-  "name": "@space-sa/api",
+  "name": "@eyewitness/api",
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
@@ -12,8 +12,8 @@
     "test:coverage": "vitest --coverage"
   },
   "dependencies": {
-    "@space-sa/core": "file:../../packages/core",
-    "@space-sa/sgp4": "file:../../packages/sgp4",
+    "@eyewitness/core": "file:../../packages/core",
+    "@eyewitness/sgp4": "file:../../packages/sgp4",
     "fastify": "^4.24.3",
     "@fastify/cors": "^8.4.0",
     "@fastify/websocket": "^8.3.1",

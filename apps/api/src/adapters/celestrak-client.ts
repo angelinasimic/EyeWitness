@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { logger } from '../utils/logger';
-import { CelestrakGpData, CelestrakGpDataSchema } from '@space-sa/core';
+import { CelestrakGpData, CelestrakGpDataSchema } from '@eyewitness/core';
 
 export class CelestrakClient {
   private client: AxiosInstance;

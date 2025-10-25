@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { WebSocketMessage } from '@space-sa/core';
+import { WebSocketMessage } from '@eyewitness/core';
 import { logger } from '../utils/logger';
 
 export class WebSocketManager {

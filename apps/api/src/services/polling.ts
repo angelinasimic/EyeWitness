@@ -7,7 +7,7 @@ import { CelestrakClient } from '../adapters/celestrak-client';
 import { SocratesClient } from '../adapters/socrates-client';
 import { SpacetrackClient } from '../adapters/spacetrack-client';
 import { config } from '../config';
-import { DEFAULT_POLLING_CONFIG } from '@space-sa/core';
+import { DEFAULT_POLLING_CONFIG } from '@eyewitness/core';
 
 export class PollingService {
   private wsManager: WebSocketManager;

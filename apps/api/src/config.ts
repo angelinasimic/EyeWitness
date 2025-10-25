@@ -1,5 +1,5 @@
 import { config as dotenvConfig } from 'dotenv';
-import { EnvConfigSchema } from '@space-sa/core';
+import { EnvConfigSchema } from '@eyewitness/core';
 import path from 'path';
 
 // Load .env from the root directory
