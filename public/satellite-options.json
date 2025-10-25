@@ -1,0 +1,17 @@
+[
+  { "name": "ISS (ZARYA)",        "altitudeKm": 410, "inclinationDeg": 51.6, "raanDeg": 0 },
+  { "name": "HUBBLE",             "altitudeKm": 540, "inclinationDeg": 28.5, "raanDeg": 30 },
+  { "name": "SENTINEL-1A",        "altitudeKm": 693, "inclinationDeg": 98.2, "raanDeg": 60 },
+  { "name": "SENTINEL-1B",        "altitudeKm": 693, "inclinationDeg": 98.2, "raanDeg": 90 },
+  { "name": "SENTINEL-2A",        "altitudeKm": 786, "inclinationDeg": 98.6, "raanDeg": 120 },
+  { "name": "SENTINEL-2B",        "altitudeKm": 786, "inclinationDeg": 98.6, "raanDeg": 150 },
+  { "name": "SENTINEL-3A",        "altitudeKm": 814, "inclinationDeg": 98.6, "raanDeg": 180 },
+  { "name": "SENTINEL-3B",        "altitudeKm": 814, "inclinationDeg": 98.6, "raanDeg": 210 },
+  { "name": "SENTINEL-5P",        "altitudeKm": 824, "inclinationDeg": 98.7, "raanDeg": 240 },
+  { "name": "LANDSAT 8",          "altitudeKm": 705, "inclinationDeg": 98.2, "raanDeg": 270 },
+  { "name": "LANDSAT 9",          "altitudeKm": 705, "inclinationDeg": 98.2, "raanDeg": 300 },
+  { "name": "TERRA",              "altitudeKm": 705, "inclinationDeg": 98.2, "raanDeg": 330 },
+  { "name": "AQUA",               "altitudeKm": 705, "inclinationDeg": 98.2, "raanDeg": 45 },
+  { "name": "SUOMI NPP",          "altitudeKm": 824, "inclinationDeg": 98.7, "raanDeg": 75 },
+  { "name": "NOAA-20 (JPSS-1)",   "altitudeKm": 833, "inclinationDeg": 98.7, "raanDeg": 105 }
+]
