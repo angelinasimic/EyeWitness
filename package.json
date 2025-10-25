@@ -1,0 +1,26 @@
+{
+  "name": "space-situational-awareness",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "test:e2e": "npm run test:e2e --workspace=apps/web",
+    "lint": "npm run lint --workspaces",
+    "type-check": "npm run type-check --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@esbuild/darwin-arm64": "^0.25.11"
+  }
+}
