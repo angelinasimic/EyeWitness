@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Satellite, RiskAlert, SpaceWeatherData } from './types';
 import { Satellites } from './components/Satellites';
 import { RiskPanel } from './components/RiskPanel';
-import { MiniGlobe } from './components/MiniGlobe';
+import { OrbitVisualizer } from './components/OrbitVisualizer';
 import { KpChart } from './components/KpChart';
 import { fetchSpaceWeather, loadConjunctions } from './logic/data';
 import { attachEventsToSatellites, createSpaceWeatherAlerts } from './logic/risk';
@@ -197,8 +197,11 @@ export default function App() {
         {activeTab === 'visualization' && (
           <div style={{ display: 'grid', gap: '20px' }}>
             <div>
-              <h3 style={{ margin: '0 0 15px 0', color: '#333' }}>3D Satellite View</h3>
-              <MiniGlobe satellites={satellites} />
+              <h3 style={{ margin: '0 0 15px 0', color: '#333' }}>Advanced Orbital Visualization</h3>
+              <p style={{ fontSize: '14px', color: '#666', marginBottom: '15px' }}>
+                Interactive 3D visualization with realistic orbital mechanics, Earth texture, and animated satellite orbits.
+              </p>
+              <OrbitVisualizer satellites={satellites} />
             </div>
             <div>
               <h3 style={{ margin: '0 0 15px 0', color: '#333' }}>Space Weather Activity</h3>
