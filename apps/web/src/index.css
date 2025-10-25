@@ -34,10 +34,10 @@
   }
   
   .input {
-    @apply w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-space-500 focus:border-transparent;
+    @apply w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-space-600 focus:border-transparent;
   }
   
   .select {
-    @apply w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-space-500 focus:border-transparent;
+    @apply w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-space-600 focus:border-transparent;
   }
 }
