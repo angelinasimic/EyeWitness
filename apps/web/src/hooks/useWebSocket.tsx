@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { WebSocketMessage } from '@space-sa/core';
+import { WebSocketMessage } from '@eyewitness/core';
 
 interface WebSocketContextType {
   isConnected: boolean;

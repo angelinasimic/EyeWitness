@@ -1,4 +1,4 @@
-# Space Situational Awareness (SSA) Application
+# EyeWitness Application
 
 A comprehensive space situational awareness application that provides real-time monitoring of space weather, satellite tracking, and AI-powered decision support for space operations.
 

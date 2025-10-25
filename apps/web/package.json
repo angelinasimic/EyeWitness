@@ -1,5 +1,5 @@
 {
-  "name": "@space-sa/web",
+  "name": "@eyewitness/web",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -13,8 +13,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@space-sa/core": "file:../../packages/core",
-    "@space-sa/sgp4": "file:../../packages/sgp4",
+    "@eyewitness/core": "file:../../packages/core",
+    "@eyewitness/sgp4": "file:../../packages/sgp4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",

@@ -32,7 +32,7 @@ export function Layout({ children }: LayoutProps) {
             <div className="flex items-center">
               <Activity className="h-8 w-8 text-space-400" />
               <h1 className="ml-2 text-xl font-bold text-white">
-                Space Situational Awareness
+                EyeWitness
               </h1>
             </div>
             <div className="flex items-center space-x-4">

@@ -1,5 +1,5 @@
 {
-  "name": "@space-sa/core",
+  "name": "@eyewitness/core",
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",

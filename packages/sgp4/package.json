@@ -1,5 +1,5 @@
 {
-  "name": "@space-sa/sgp4",
+  "name": "@eyewitness/sgp4",
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",

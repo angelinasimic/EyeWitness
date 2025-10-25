@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SatelliteInput } from '@space-sa/core';
+import { SatelliteInput } from '@eyewitness/core';
 
 const apiClient = axios.create({
   baseURL: 'http://localhost:3000',

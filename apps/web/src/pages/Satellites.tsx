@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Plus, Satellite, Trash2, Edit } from 'lucide-react';
 import { api } from '../services/api';
-import { SatelliteInput } from '@space-sa/core';
+import { SatelliteInput } from '@eyewitness/core';
 
 export function Satellites() {
   const [showAddForm, setShowAddForm] = useState(false);

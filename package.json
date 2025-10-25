@@ -1,5 +1,5 @@
 {
-  "name": "space-situational-awareness",
+  "name": "eyewitness",
   "version": "1.0.0",
   "private": true,
   "workspaces": [
@@ -19,8 +19,5 @@
   "devDependencies": {
     "concurrently": "^8.2.2",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "@esbuild/darwin-arm64": "^0.25.11"
   }
 }
