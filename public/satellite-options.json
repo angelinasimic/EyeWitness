@@ -13,5 +13,10 @@
   { "name": "TERRA",              "altitudeKm": 705, "inclinationDeg": 98.2, "raanDeg": 330 },
   { "name": "AQUA",               "altitudeKm": 705, "inclinationDeg": 98.2, "raanDeg": 45 },
   { "name": "SUOMI NPP",          "altitudeKm": 824, "inclinationDeg": 98.7, "raanDeg": 75 },
-  { "name": "NOAA-20 (JPSS-1)",   "altitudeKm": 833, "inclinationDeg": 98.7, "raanDeg": 105 }
+  { "name": "NOAA-20 (JPSS-1)",   "altitudeKm": 833, "inclinationDeg": 98.7, "raanDeg": 105 },
+  { "name": "SWARM-A",            "altitudeKm": 450, "inclinationDeg": 87.4, "raanDeg": 15 },
+  { "name": "SWARM-B",            "altitudeKm": 450, "inclinationDeg": 87.4, "raanDeg": 45 },
+  { "name": "SWARM-C",            "altitudeKm": 450, "inclinationDeg": 87.4, "raanDeg": 75 },
+  { "name": "GOES-16",            "altitudeKm": 35786, "inclinationDeg": 0.0, "raanDeg": 0 },
+  { "name": "GOES-17",            "altitudeKm": 35786, "inclinationDeg": 0.0, "raanDeg": 0 }
 ]

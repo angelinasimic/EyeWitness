@@ -22,22 +22,56 @@ A satellite monitoring system for tracking satellite conjunctions and space weat
 - D3.js (line chart)
 - No other dependencies
 
+## Installation & Setup
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd hackathon-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
+
+### Available Scripts
+
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
+- `npm run eject` - Eject from Create React App (not recommended)
+
 ## File Structure
 
 ```
 /src
-  App.tsx                 // Main application (211 lines)
-  index.tsx              // Entry point (17 lines)
-  types.ts               // Type definitions (54 lines)
+  App.tsx                 // Main application
+  index.tsx              // Entry point
+  types.ts               // Type definitions
   /components
-    Satellites.tsx       // Satellite management (157 lines)
-    RiskPanel.tsx        // Risk alerts display (146 lines)
-    MiniGlobe.tsx        // Three.js globe (122 lines)
-    KpChart.tsx          // D3 line chart (136 lines)
+    Satellites.tsx       // Satellite management
+    RiskPanel.tsx        // Risk alerts display
+    MiniGlobe.tsx        // Three.js globe
+    KpChart.tsx          // D3 line chart
   /logic
-    data.ts              // Data fetching (57 lines)
-    risk.ts              // Risk computation (81 lines)
-/data
+    data.ts              // Data fetching
+    risk.ts              // Risk computation
+/public
   satellite-options.json // 15 real satellites
   sample-conjunctions.json // Conjunction events
   sample-spaceweather.json // Kp index data
@@ -50,3 +84,16 @@ A satellite monitoring system for tracking satellite conjunctions and space weat
 - 3D visualization of satellite positions
 - Interactive risk alert management
 - NOAA SWPC data integration
+
+## Usage
+
+1. **Add Satellites**: Go to the "Satellites" tab and add satellites from the dropdown or manually
+2. **View Risks**: Check the "Risk Alerts" tab for conjunction and space weather alerts
+3. **Visualize**: Use the "Visualization" tab to see the 3D globe and Kp chart
+4. **Execute Actions**: Click "Execute Action" on alerts to mark them as handled
+
+## Data Sources
+
+- **Space Weather**: Fetches live Kp index from NOAA SWPC, falls back to sample data
+- **Conjunctions**: Uses local sample data with realistic satellite names
+- **Satellites**: 15 pre-configured real satellite options available

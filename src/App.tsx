@@ -8,53 +8,24 @@ import { fetchSpaceWeather, loadConjunctions } from './logic/data';
 import { attachEventsToSatellites, createSpaceWeatherAlerts } from './logic/risk';
 
 /**
- * Main App component for the EyeWitness satellite monitoring system
+ * Main App component for satellite monitoring
  * 
- * Central component that coordinates all features of the satellite monitoring system.
- * Manages state, handles user interactions, and orchestrates data flow.
+ * Manages satellites, alerts, and data loading.
  */
 export default function App() {
-  // ===== STATE MANAGEMENT =====
-  // All application state is managed using React hooks for simplicity
-  
-  /** Array of satellites currently being tracked */
+  // State for satellites, alerts, and UI
   const [satellites, setSatellites] = useState<Satellite[]>([]);
-  
-  /** Array of risk alerts generated from external data sources */
   const [alerts, setAlerts] = useState<RiskAlert[]>([]);
-  
-  /** Space weather data for the Kp chart visualization */
   const [kpData, setKpData] = useState<SpaceWeatherData[]>([]);
-  
-  /** Loading state for data fetching operations */
   const [isLoading, setIsLoading] = useState(false);
-  
-  /** Currently active tab in the navigation system */
   const [activeTab, setActiveTab] = useState<'satellites' | 'risks' | 'visualization'>('satellites');
 
-  // ===== UTILITY FUNCTIONS =====
-  
-  /**
-   * Generate unique ID for satellites
-   * 
-   * Creates a unique identifier using timestamp and random string.
-   * This ensures each satellite has a unique ID even if added simultaneously.
-   * 
-   * @returns Unique string identifier
-   */
+  // Generate unique ID for satellites
   const generateId = () => `sat-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
-  // ===== EVENT HANDLERS =====
-  // All event handlers use useCallback to prevent unnecessary re-renders
+  // Event handlers
 
-  /**
-   * Handles adding a new satellite to the tracking system
-   * 
-   * This function is called when a user submits the satellite form.
-   * It generates a unique ID for the satellite and adds it to the state.
-   * 
-   * @param satelliteData - Satellite data without ID (ID is generated here)
-   */
+  // Add satellite to tracking
   const handleAddSatellite = useCallback((satelliteData: Omit<Satellite, 'id'>) => {
     const newSatellite: Satellite = {
       ...satelliteData,
@@ -63,27 +34,12 @@ export default function App() {
     setSatellites(prev => [...prev, newSatellite]);
   }, []);
 
-  /**
-   * Handles removing a satellite from the tracking system
-   * 
-   * This function filters out the satellite with the specified ID
-   * from the satellites array, effectively removing it from tracking.
-   * 
-   * @param id - Unique identifier of the satellite to remove
-   */
+  // Remove satellite from tracking
   const handleRemoveSatellite = useCallback((id: string) => {
     setSatellites(prev => prev.filter(sat => sat.id !== id));
   }, []);
 
-  /**
-   * Handles executing a risk alert action
-   * 
-   * When a user clicks "Execute Action" on an alert, it marks the alert as "executed"
-   * but doesn't remove it from the system. This helps track which
-   * alerts have been reviewed by operators.
-   * 
-   * @param id - Unique identifier of the alert to execute
-   */
+  // Mark alert as executed
   const handleAcknowledgeAlert = useCallback((id: string) => {
     setAlerts(prev => 
       prev.map(alert => 
@@ -92,15 +48,7 @@ export default function App() {
     );
   }, []);
 
-  // ===== DATA LOADING =====
-  // Functions for fetching and processing external data
-
-  /**
-   * Load risk data based on tracked satellites and create alerts
-   * 
-   * Generates realistic risk alerts based on tracked satellites.
-   * Creates conjunction alerts and space weather alerts.
-   */
+  // Load data and create alerts
   const loadData = useCallback(async () => {
     if (satellites.length === 0) {
       setAlerts([]);
@@ -109,7 +57,6 @@ export default function App() {
 
     setIsLoading(true);
     try {
-      // Load space weather and conjunctions in parallel for better performance
       const [spaceWeather, conjunctions] = await Promise.all([
         fetchSpaceWeather(),
         loadConjunctions()
@@ -117,9 +64,8 @@ export default function App() {
 
       setKpData(spaceWeather);
 
-      // Generate alerts based on current satellite list
       const conjunctionAlerts = attachEventsToSatellites(satellites, conjunctions);
-      const spaceWeatherAlerts = createSpaceWeatherAlerts(spaceWeather);
+      const spaceWeatherAlerts = createSpaceWeatherAlerts(satellites, spaceWeather);
       
       setAlerts([...conjunctionAlerts, ...spaceWeatherAlerts]);
     } catch (error) {
@@ -129,31 +75,18 @@ export default function App() {
     }
   }, [satellites]);
 
-  // ===== EFFECT HOOKS =====
-  // React hooks for managing component lifecycle and side effects
-
-  /**
-   * Auto-refresh data every 60 seconds
-   * 
-   * Sets up a timer to automatically refresh data every 60 seconds.
-   * Clears interval when component unmounts.
-   */
+  // Auto-refresh data every 60 seconds
   useEffect(() => {
     const interval = setInterval(loadData, 60000);
     return () => clearInterval(interval);
   }, [loadData]);
 
-  /**
-   * Load data when satellites change
-   * 
-   * Triggers data loading when satellite list changes.
-   */
+  // Load data when satellites change
   useEffect(() => {
     loadData();
   }, [loadData]);
 
-  // ===== RENDER =====
-  // Main application UI with tab-based navigation
+  // Main UI
 
   return (
     <div style={{ 
