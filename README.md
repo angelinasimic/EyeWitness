@@ -74,6 +74,7 @@ A comprehensive space situational awareness application that provides real-time 
 4. **Start the application**
    ```bash
    # Start both API and web app
+   cd <Project-Folder>/apps/web
    npm run dev
    
    # Or start individually
