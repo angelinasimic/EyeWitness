@@ -2,7 +2,7 @@
 
 A comprehensive space situational awareness application that provides real-time monitoring of space weather, satellite tracking, and AI-powered decision support for space operations.
 
-## 🚀 Features
+## Features
 
 - **Real-time Space Weather Monitoring**: SWPC alerts, Kp index, CME tracking
 - **Satellite Tracking**: 3D visualization with SGP4 propagation
@@ -11,7 +11,7 @@ A comprehensive space situational awareness application that provides real-time 
 - **WebSocket Integration**: Real-time updates and alerts
 - **Modern Tech Stack**: React, TypeScript, Fastify, Three.js
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ├── apps/
@@ -23,7 +23,7 @@ A comprehensive space situational awareness application that provides real-time 
 └── docker-compose.yml
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend (API)
 - **Fastify** - High-performance web framework
@@ -46,7 +46,7 @@ A comprehensive space situational awareness application that provides real-time 
 - **NASA DONKI** - Space weather notifications
 - **CelesTrak** - Satellite orbital data
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
@@ -103,7 +103,7 @@ PORT=3000
 HOST=0.0.0.0
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Health & Status
 - `GET /healthz` - Basic health check
@@ -127,7 +127,7 @@ HOST=0.0.0.0
 - `GET /decisions` - List all decisions
 - `POST /decisions/suggest` - Generate decision suggestions
 
-## 🎯 Usage
+## Usage
 
 ### Adding Satellites
 1. Navigate to the Satellites page
@@ -192,7 +192,7 @@ npm run lint             # Lint all packages
 npm run type-check       # TypeScript type checking
 ```
 
-## 🐳 Docker Support
+## Docker Support
 
 ```bash
 # Build and run with Docker Compose
@@ -203,7 +203,7 @@ docker-compose up api    # API server only
 docker-compose up web    # Web app only
 ```
 
-## 📊 Data Sources
+## Data Sources
 
 - **SWPC**: Space weather alerts and Kp index
 - **Space-Track**: Satellite conjunction data
@@ -219,7 +219,7 @@ The AI decision engine analyzes space weather and conjunction data to provide au
 - **Risk Assessment**: Probability calculations, time windows
 - **Action Recommendations**: Safe mode, maneuvers, monitoring
 
-## 🔒 Security
+## Security
 
 - Rate limiting on API endpoints
 - CORS configuration for cross-origin requests
@@ -227,7 +227,7 @@ The AI decision engine analyzes space weather and conjunction data to provide au
 - Environment variable validation
 - Input validation with Zod schemas
 
-## 📈 Performance
+## Performance
 
 - WebSocket for real-time updates
 - Efficient polling with configurable intervals
@@ -235,7 +235,7 @@ The AI decision engine analyzes space weather and conjunction data to provide au
 - Caching with TanStack Query
 - TypeScript for compile-time error checking
 
-## 🚀 Deployment
+## Deployment
 
 ### Production Build
 ```bash
@@ -249,7 +249,7 @@ npm start
 3. Set up SSL certificates
 4. Configure monitoring and logging
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -261,7 +261,7 @@ npm start
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Space Weather Prediction Center (SWPC)
 - Space-Track.org for conjunction data
