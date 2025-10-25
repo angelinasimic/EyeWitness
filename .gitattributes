@@ -1,0 +1,56 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code files
+*.ts text
+*.tsx text
+*.js text
+*.jsx text
+*.json text
+*.md text
+*.yml text
+*.yaml text
+
+# Configuration files
+*.config.js text
+*.config.ts text
+*.config.json text
+
+# Documentation
+*.md text
+README.md text
+LICENSE text
+
+# Docker files
+Dockerfile text
+docker-compose.yml text
+
+# Environment files
+.env.example text
+.gitignore text
+.gitattributes text
+
+# Package files
+package.json text
+package-lock.json text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# Archives
+*.zip binary
+*.tar.gz binary
+*.tgz binary
+
+# OS files
+.DS_Store binary
+Thumbs.db binary
